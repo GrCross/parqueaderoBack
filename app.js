@@ -17,7 +17,7 @@ app.use('/parqueadero/vehiculo',vehiculoController);
 
 
 mongoose.
-connect(process.env.DB_CONNECTION,
+connect("mongodb+srv://Daniel:123lol@parqueadero.c5vx0.mongodb.net/Parqueadero?retryWrites=true&w=majority",
     {useNewUrlParser: true},
     () => console.log('mongoDB connected'));
 
