@@ -15,7 +15,7 @@ router.get('/', async(req,res) => {
 
 //Registrar un vehiculo 
 router.post('/', async (req,res) =>{
-    console.log(req.body);
+    
 
     const vehiculo = new Vehiculo({
         identifier: req.body.identifier,
@@ -36,7 +36,6 @@ router.post('/', async (req,res) =>{
 
 //Actualizar la hora de salida de un vehiculo a una especifica hora
 router.patch('/:identifier', async(req,res) => {
-    console.log(req.body);
     try {
         const vehiculo = await Vehiculo.updateOne({
             identifier: req.params.identifier
